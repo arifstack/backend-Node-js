@@ -1,4 +1,4 @@
-'use trict';
+'use strict';
 
 
 module.exports = function(app){
@@ -6,4 +6,7 @@ module.exports = function(app){
 
     app.route('/')
         .get(jsonku.index);
+
+    app.route('/read_product')
+        .get(jsonku.read_produc);
 }
