@@ -9,4 +9,6 @@ module.exports = function(app){
 
     app.route('/read_product')
         .get(jsonku.read_produc);
+    app.route('/read_product_by_id/:id_product')
+        .get(jsonku.read_product_by_id);
 }

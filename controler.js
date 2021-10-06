@@ -14,5 +14,18 @@ exports.read_produc = function(req,res){
         }else{
             response.ok(rows, res)
         }
-    })
-}
+    });
+};
+
+//menampilkan data berdasarkan id
+exports.read_product_by_id = function(req,res){
+    let id_product = req.params.id_product;
+    connection.query('SELECT * from product where id=?',[id_product], 
+    function(error, rows, fileds){
+        if(error){
+            console.log(error);
+        }else{
+            response.ok(rows, res)
+        }
+    });
+};
